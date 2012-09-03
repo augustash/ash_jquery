@@ -16,7 +16,24 @@
         </Ash_Jquery>
     </modules>
 
+    <global>
+        <helpers>
+            <ash_jquery>
+                <class>Ash_Jquery_Helper</class>
+            </ash_jquery>
+        </helpers>
+    </global>
+
     <adminhtml>
+        <translate>
+            <modules>
+                <Ash_Jquery>
+                    <files>
+                        <default>Ash_Jquery.csv</default>
+                    </files>
+                </Ash_Jquery>
+            </modules>
+        </translate>
         <layout>
             <updates>
                 <ash_jquery>
@@ -35,4 +52,13 @@
             </updates>
         </layout>
     </frontend>
+
+    <default>
+        <ash_jquery>
+            <general>
+                <front_enabled>1</front_enabled>
+                <admin_enabled>0</admin_enabled>
+            </general>
+        </ash_jquery>
+    </default>
 </config>

@@ -1,7 +1,7 @@
 # Ash_Jquery Mappings
 Ash_Jquery.xml        app/etc/modules/Ash_Jquery.xml
-code                  app/code/local/Ash/Jquery/
-frontend/layout/*     app/design/adminhtml/default/default/layout/
+code                  app/code/local/Ash/Jquery
+locale/*              app/etc/locale/en_US/
+adminhtml/layout/*    app/design/adminhtml/default/default/layout/
 frontend/layout/*     app/design/frontend/base/default/layout/
-skin/js/*             skin/adminhtml/default/default/
-skin/js/*             skin/frontend/base/default/js/
+js                    js/jquery
