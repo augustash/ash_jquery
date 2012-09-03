@@ -6,7 +6,8 @@ Date:   Sept 1, 2012
 # Description
 
 This extension adds jQuery and enabled no-conflict mode so that it will play 
-nicely with Magento's prototype installation.
+nicely with Magento's prototype installation. Users may enable jQuery on frontend
+and/or administration area.
 
 Installation
 ------------
