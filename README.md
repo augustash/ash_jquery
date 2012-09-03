@@ -1,4 +1,4 @@
-Title:  Ash_Core Extension
+Title:  Ash_Jquery Extension
 Author: Peter McWilliams  
 Email:  core@augustash.com  
 Date:   Sept 1, 2012  
