@@ -1,4 +1,5 @@
 # Ash_Jquery Mappings
+
 Ash_Jquery.xml        app/etc/modules/Ash_Jquery.xml
 code                  app/code/local/Ash/Jquery
 locale/*              app/etc/locale/en_US/
