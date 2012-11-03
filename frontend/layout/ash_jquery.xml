@@ -15,8 +15,9 @@ Default layout, loads most of the pages
 -->
     <default>
         <reference name="head">
-            <action method="addItem" ifconfig="ash_jquery/general/front_enabled"><type>js</type><name>jquery/jquery-1.8.0.min.js</name></action>
-            <action method="addItem" ifconfig="ash_jquery/general/front_enabled"><type>js</type><name>jquery/jquery-noconflict.js</name></action>
+            <action method="addItem" ifconfig="ash_jquery/jquery/front_enabled"><type>js</type><name>jquery/jquery-noconflict.js</name></action>
+            <action method="addExternalItem" ifconfig="ash_jquery/jquery/front_enabled"><type>external_js</type><name>//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js</name></action>
+            <action method="addExternalItem" ifconfig="ash_jquery/jquery_ui/front_enabled"><type>external_js</type><name>//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js</name></action>
         </reference>
     </default>
 </layout>

@@ -12,7 +12,7 @@
 <config>
     <modules>
         <Ash_Jquery>
-             <version>1.0.1</version>
+             <version>1.1.0</version>
         </Ash_Jquery>
     </modules>
 
@@ -55,10 +55,14 @@
 
     <default>
         <ash_jquery>
-            <general>
+            <jquery>
                 <front_enabled>1</front_enabled>
                 <admin_enabled>0</admin_enabled>
-            </general>
+            </jquery>
+            <jquery_ui>
+                <front_enabled>0</front_enabled>
+                <admin_enabled>0</admin_enabled>
+            </jquery_ui>
         </ash_jquery>
     </default>
 </config>
