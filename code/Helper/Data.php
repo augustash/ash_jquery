@@ -46,6 +46,17 @@ class Ash_Jquery_Helper_Data extends Mage_Core_Helper_Abstract
     const XML_PATH_JQUERYUI_ADMIN_ENABLED = 'ash_jquery/jquery_ui/admin_enabled';
 
     /**
+     * Check if jQuery is enabled globally
+     *
+     * @param  string $type
+     * @return bool
+     */
+    static public function isEnabled($type='jquery')
+    {
+        return (self::_isEnabled('front', $type) && self::_isEnabled('admin', $type));
+    }
+
+    /**
      * Check if jQuery is enabled on frontend
      *
      * @param  string $type
