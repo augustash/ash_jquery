@@ -3,8 +3,8 @@
  * Add Jquery/Jquery UI support
  *
  * @category    Ash
- * @package     Ash_Core
- * @copyright   Copyright (c) 2012 August Ash, Inc. (http://www.augustash.com)
+ * @package     Ash_Jquery
+ * @copyright   Copyright (c) 2013 August Ash, Inc. (http://www.augustash.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
