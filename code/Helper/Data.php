@@ -17,104 +17,175 @@
  */
 class Ash_Jquery_Helper_Data extends Mage_Core_Helper_Abstract
 {
-    /**
-     * jQuery Enabled
-     *
-     * @var string
-     */
-    const XML_PATH_JQUERY_FRONT_ENABLED = 'ash_jquery/jquery/front_enabled';
+    const XML_PATH_USE_MINIFIED               = 'ash_jquery/general/use_minified';
+
+    const XML_PATH_CDN_ENABLED                = 'ash_jquery/cdn/enabled';
+    const XML_PATH_CDN_JQUERY_ENABLED         = 'ash_jquery/cdn/jquery_enabled';
+    const XML_PATH_CDN_JQUERY_MIGRATE_ENABLED = 'ash_jquery/cdn/jquery_migrate_enabled';
+    const XML_PATH_CDN_JQUERYUI_ENABLED       = 'ash_jquery/cdn/jqueryui_enabled';
+
+    const XML_PATH_JQUERY_ENABLED             = 'ash_jquery/jquery/enabled';
+    const XML_PATH_JQUERY_MIGRATE_ENABLED     = 'ash_jquery/jquery/migrate_enabled';
+    const XML_PATH_JQUERYUI_ENABLED           = 'ash_jquery/jquery/ui_enabled';
+
+    const XML_PATH_JQUERY_VERSION             = 'ash_jquery/version/jquery';
+    const XML_PATH_JQUERYUI_VERSION           = 'ash_jquery/version/jquery_ui';
 
     /**
-     * jQuery UI Enabled
+     * Check if CDN should be used
      *
-     * @var string
+     * @return  bool
      */
-    const XML_PATH_JQUERYUI_FRONT_ENABLED = 'ash_jquery/jquery_ui/front_enabled';
-
-    /**
-     * jQuery Enabled
-     *
-     * @var string
-     */
-    const XML_PATH_JQUERY_ADMIN_ENABLED = 'ash_jquery/jquery/admin_enabled';
-
-    /**
-     * jQuery UI Enabled
-     *
-     * @var string
-     */
-    const XML_PATH_JQUERYUI_ADMIN_ENABLED = 'ash_jquery/jquery_ui/admin_enabled';
-
-    /**
-     * Check if jQuery is enabled globally
-     *
-     * @param  string $type
-     * @return bool
-     */
-    static public function isEnabled($type='jquery')
+    public function useCdn()
     {
-        return (self::_isEnabled('front', $type) && self::_isEnabled('admin', $type));
+        return Mage::getStoreConfigFlag(self::XML_PATH_CDN_ENABLED);
     }
 
     /**
-     * Check if jQuery is enabled on frontend
+     * Check if minified source should be used
      *
-     * @param  string $type
-     * @return bool
+     * @return  bool
      */
-    static public function isEnabledOnFront($type='jquery')
+    public function useMinified()
     {
-        return self::_isEnabled('front', $type);
+        return Mage::getStoreConfigFlag(self::XML_PATH_USE_MINIFIED);
     }
 
     /**
-     * Check if jQuery is enabled on admin
+     * Check if jQuery is enabled
      *
-     * @param  string $type
-     * @return bool
+     * @param   mixed $cdn
+     * @return  boolean
      */
-    static public function isEnabledOnAdmin($type='jquery')
+    public function isJqueryEnabled($cdn=false)
     {
-        return self::_isEnabled('admin', $type);
-    }
-
-    /**
-     * Check if is enabled
-     *
-     * @param  string $location
-     * @param  string $type
-     * @return bool
-     */
-    static protected function _isEnabled($location, $type='jquery')
-    {
-        if ($location == 'front') {
-            switch ($type) {
-                case 'jquery':
-                    if (Mage::getStoreConfig(self::XML_PATH_JQUERY_FRONT_ENABLED)) {
-                        return true;
-                    }
-                    break;
-                case 'jquery_ui':
-                    if (Mage::getStoreConfig(self::XML_PATH_JQUERYUI_FRONT_ENABLED)) {
-                        return true;
-                    }
-                    break;
-            }
-        } elseif ($location == 'admin') {
-            switch ($type) {
-                case 'jquery':
-                    if (Mage::getStoreConfig(self::XML_PATH_JQUERY_ADMIN_ENABLED)) {
-                        return true;
-                    }
-                    break;
-                case 'jquery_ui':
-                    if (Mage::getStoreConfig(self::XML_PATH_JQUERYUI_ADMIN_ENABLED)) {
-                        return true;
-                    }
-                    break;
-            }
+        if ($cdn !== false) {
+            return Mage::getStoreConfigFlag(self::XML_PATH_CDN_JQUERY_ENABLED);
         }
 
-        return false;
+        return Mage::getStoreConfigFlag(self::XML_PATH_JQUERY_ENABLED);
+    }
+
+    /**
+     * Check if jQuery Migrate is enabled
+     *
+     * @param   mixed $cdn
+     * @return  boolean
+     */
+    public function isJqueryMigrateEnabled($cdn=false)
+    {
+        if ($cdn !== false) {
+            return Mage::getStoreConfigFlag(self::XML_PATH_CDN_JQUERY_MIGRATE_ENABLED);
+        }
+
+        return Mage::getStoreConfigFlag(self::XML_PATH_JQUERY_MIGRATE_ENABLED);
+    }
+
+    /**
+     * Check if jQuery UI is enabled
+     *
+     * @param   mixed $cdn
+     * @return  boolean
+     */
+    public function isJqueryUiEnabled($cdn=false)
+    {
+        if ($cdn !== false) {
+            return Mage::getStoreConfigFlag(self::XML_PATH_CDN_JQUERYUI_ENABLED);
+        }
+
+        return Mage::getStoreConfigFlag(self::XML_PATH_JQUERYUI_ENABLED);
+    }
+
+    /**
+     * Get selected version of jQuery
+     *
+     * @return  string
+     */
+    public function getJqueryVersion()
+    {
+        return Mage::getStoreConfig(self::XML_PATH_JQUERY_VERSION);
+    }
+
+    /**
+     * Get selected version of jQuery Migrate
+     *
+     * @return  string
+     */
+    public function getJqueryMigrateVersion()
+    {
+        return '1.1.1';
+    }
+
+    /**
+     * Get selected version of jQuery UI
+     *
+     * @return  string
+     */
+    public function getJqueryUiVersion()
+    {
+        return Mage::getStoreConfig(self::XML_PATH_JQUERYUI_VERSION);
+    }
+
+    /**
+     * Get local source URL for jQuery
+     *
+     * @return  string
+     */
+    public function getJqueryUrl()
+    {
+        return $this->getLocalSourceUrl('jquery');
+    }
+
+    /**
+     * Get local source URL for jQuery Migrate
+     *
+     * @return  string
+     */
+    public function getJqueryMigrateUrl()
+    {
+        return $this->getLocalSourceUrl('migrate');
+    }
+
+    /**
+     * Get local source URL for jQuery UI
+     *
+     * @return  string
+     */
+    public function getJqueryUiUrl()
+    {
+        return $this->getLocalSourceUrl('jqueryui');
+    }
+
+    /**
+     * Get local source path
+     *
+     * @param   string $type
+     * @return  string
+     */
+    public function getLocalSourceUrl($type)
+    {
+        switch($type) {
+            case 'jquery':
+                $file = 'jquery-' . $this->getJqueryVersion() . $this->_getFileExtension();
+                break;
+            case 'migrate':
+                $file = 'jquery-migrate-' . $this->getJqueryMigrateVersion() . $this->_getFileExtension();
+                break;
+            case 'jqueryui':
+                $file = 'jquery-ui-' . $this->getJqueryUiVersion() . $this->_getFileExtension();
+                break;
+        }
+
+        return 'jquery/' . $file;
+    }
+
+    /**
+     * Return correct local file extension
+     *
+     * @return  string
+     */
+    protected function _getFileExtension()
+    {
+        return ($this->useMinified()) ? '.min.js' : '.js';
     }
 }

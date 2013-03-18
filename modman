@@ -4,5 +4,7 @@ Ash_Jquery.xml        app/etc/modules/Ash_Jquery.xml
 code                  app/code/local/Ash/Jquery
 locale/*              app/locale/en_US/
 adminhtml/layout/*    app/design/adminhtml/default/default/layout/
+adminhtml/template/*  app/design/adminhtml/default/default/template/ash_jquery/
 frontend/layout/*     app/design/frontend/base/default/layout/
+frontend/template/*   app/design/frontend/base/default/template/ash_jquery/
 js                    js/jquery

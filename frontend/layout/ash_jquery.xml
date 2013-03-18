@@ -15,9 +15,11 @@ Default layout, loads most of the pages
 -->
     <default>
         <reference name="head">
-            <action method="addItem" ifconfig="ash_jquery/jquery/front_enabled"><type>js</type><name>jquery/jquery-1.9.1.min.js</name></action>
-            <action method="addItem" ifconfig="ash_jquery/jquery/front_enabled"><type>js</type><name>jquery/jquery-noconflict.js</name></action>
-            <action method="addItem" ifconfig="ash_jquery/jquery_ui/front_enabled"><type>js</type><name>jquery/jquery-ui-1.10.0.min.js</name></action>
+            <action method="setTemplate" ifconfig="ash_jquery/cdn/enabled"><template>ash_jquery/head.phtml</template></action>
+            <action method="addItem" ifconfig="ash_jquery/jquery/enabled"><type>js</type><name helper="ash_jquery/getJqueryUrl" /></action>
+            <action method="addItem" ifconfig="ash_jquery/jquery/enabled"><type>js</type><name>jquery/jquery-noconflict.js</name></action>
+            <action method="addItem" ifconfig="ash_jquery/jquery/migrate_enabled"><type>js</type><name helper="ash_jquery/getJqueryMigrateUrl" /></action>
+            <action method="addItem" ifconfig="ash_jquery/jquery/ui_enabled"><type>js</type><name helper="ash_jquery/getJqueryUiUrl" /></action>
         </reference>
     </default>
 </layout>

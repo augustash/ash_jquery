@@ -12,7 +12,9 @@
 <config>
     <modules>
         <Ash_Jquery>
-             <version>1.1.3</version>
+             <version>1.2.0</version>
+             <ashup
+                remote="https://s3.amazonaws.com/augustash/mage/ash_jquery-latest.zip" />
         </Ash_Jquery>
     </modules>
 
@@ -22,6 +24,11 @@
                 <class>Ash_Jquery_Helper</class>
             </ash_jquery>
         </helpers>
+        <models>
+            <ash_jquery>
+                <class>Ash_Jquery_Model</class>
+            </ash_jquery>
+        </models>
     </global>
 
     <adminhtml>
@@ -55,14 +62,23 @@
 
     <default>
         <ash_jquery>
+            <general>
+                <use_minified>1</use_minified>
+            </general>
+            <cdn>
+                <enabled>1</enabled>
+                <jquery_enabled>1</jquery_enabled>
+                <jquery_migrate_enabled>1</jquery_migrate_enabled>
+                <jqueryui_enabled>0</jqueryui_enabled>
+            </cdn>
             <jquery>
-                <front_enabled>1</front_enabled>
-                <admin_enabled>0</admin_enabled>
+                <enabled>0</enabled>
+                <ui_enabled>0</ui_enabled>
             </jquery>
-            <jquery_ui>
-                <front_enabled>0</front_enabled>
-                <admin_enabled>0</admin_enabled>
-            </jquery_ui>
+            <version>
+                <jquery>1.9.1</jquery>
+                <jquery_ui>1.10.2</jquery_ui>
+            </version>
         </ash_jquery>
     </default>
 </config>
