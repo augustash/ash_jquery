@@ -59,7 +59,8 @@ class Ash_Jquery_Helper_Data extends Mage_Core_Helper_Abstract
     public function isEnabled()
     {
         if (Mage::getStoreConfigFlag(self::XML_PATH_JQUERY_ENABLED)
-            || Mage::getStoreConfigFlag(self::XML_PATH_CDN_JQUERY_ENABLED)) {
+            || (Mage::getStoreConfigFlag(self::XML_PATH_CDN_ENABLED)
+                && Mage::getStoreConfigFlag(self::XML_PATH_CDN_JQUERY_ENABLED))) {
             return true;
         }
 
@@ -74,7 +75,8 @@ class Ash_Jquery_Helper_Data extends Mage_Core_Helper_Abstract
     public function isUiEnabled()
     {
         if (Mage::getStoreConfigFlag(self::XML_PATH_JQUERYUI_ENABLED)
-            || Mage::getStoreConfigFlag(self::XML_PATH_CDN_JQUERYUI_ENABLED)) {
+            || (Mage::getStoreConfigFlag(self::XML_PATH_CDN_ENABLED)
+                && Mage::getStoreConfigFlag(self::XML_PATH_CDN_JQUERYUI_ENABLED))) {
             return true;
         }
 

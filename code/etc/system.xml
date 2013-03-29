@@ -62,11 +62,6 @@
                             <sort_order>20</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <depends>
-                                <enabled>
-                                    <value>1</value>
-                                </enabled>
-                            </depends>
                         </jquery_enabled>
                         <jquery_migrate_enabled translate="label" module="ash_jquery">
                             <label>jQuery Migrate Enabled</label>
@@ -75,11 +70,6 @@
                             <sort_order>40</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <depends>
-                                <jquery_enabled>
-                                    <value>1</value>
-                                </jquery_enabled>
-                            </depends>
                         </jquery_migrate_enabled>
                         <jqueryui_enabled translate="label" module="ash_jquery">
                             <label>jQuery UI Enabled</label>
@@ -88,11 +78,6 @@
                             <sort_order>50</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <depends>
-                                <enabled>
-                                    <value>1</value>
-                                </enabled>
-                            </depends>
                         </jqueryui_enabled>
                     </fields>
                 </cdn>
@@ -120,11 +105,6 @@
                             <sort_order>30</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <depends>
-                                <enabled>
-                                    <value>1</value>
-                                </enabled>
-                            </depends>
                         </migrate_enabled>
                         <ui_enabled translate="label,comment" module="ash_jquery">
                             <label>jQuery UI Enabled</label>
