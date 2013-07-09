@@ -40,6 +40,10 @@ if ($_helper->useCdn()) {
 </script>
 <![endif]-->
 
+<!-- IE specfic classes on HTML -->
+<!--[if IE 7]>    <html class="ie7 ie" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 ie" lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>"> <![endif]-->
+
 <?php if ($_helper->useCdn()) : ?>
 <!-- JQUERY CDN -->
 <?php if ($_helper->isJqueryEnabled('cdn')) : ?>
