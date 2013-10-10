@@ -26,9 +26,9 @@ class Ash_Jquery_Model_System_Config_Source_Version_Jquery
     {
         $this->_options = array(
             array('value' => '', 'label' => Mage::helper('adminhtml')->__('-- Please Select --')),
-            array('value' => '1.7.2', 'label' => '1.7.2'),
-            array('value' => '1.8.3', 'label' => '1.8.3'),
             array('value' => '1.9.1', 'label' => '1.9.1'),
+            array('value' => '1.10.2', 'label' => '1.10.2'),
+            array('value' => '2.0.3', 'label' => '2.0.3'),
         );
 
         return $this->_options;

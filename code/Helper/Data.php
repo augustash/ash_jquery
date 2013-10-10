@@ -145,7 +145,7 @@ class Ash_Jquery_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function getJqueryMigrateVersion()
     {
-        return '1.1.1';
+        return '1.2.1';
     }
 
     /**
