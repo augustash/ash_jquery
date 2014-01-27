@@ -12,7 +12,7 @@
 <config>
     <modules>
         <Ash_Jquery>
-             <version>1.3.0</version>
+             <version>1.3.1</version>
              <ashup
                 remote="https://s3.amazonaws.com/augustash/mage/ash_jquery-latest.zip" />
         </Ash_Jquery>
