@@ -198,17 +198,17 @@ class Ash_Jquery_Helper_Data extends Mage_Core_Helper_Abstract
     {
         switch($type) {
             case 'jquery':
-                $file = 'jquery-' . $this->getJqueryVersion() . $this->_getFileExtension();
+                $file = 'jquery/' . $this->getJqueryVersion() . '/jquery' . $this->_getFileExtension();
                 break;
             case 'migrate':
-                $file = 'jquery-migrate-' . $this->getJqueryMigrateVersion() . $this->_getFileExtension();
+                $file = 'jquery/jquery-migrate-' . $this->getJqueryMigrateVersion() . $this->_getFileExtension();
                 break;
             case 'jqueryui':
-                $file = 'jquery-ui-' . $this->getJqueryUiVersion() . $this->_getFileExtension();
+                $file = 'jquery/' . $this->getJqueryUiVersion() . '/jquery-ui' . $this->_getFileExtension();
                 break;
         }
 
-        return 'jquery/' . $file;
+        return $file;
     }
 
     /**
