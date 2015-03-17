@@ -4,7 +4,7 @@
  *
  * @category    Ash
  * @package     Ash_Jquery
- * @copyright   Copyright (c) 2013 August Ash, Inc. (http://www.augustash.com)
+ * @copyright   Copyright (c) 2015 August Ash, Inc. (http://www.augustash.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
@@ -26,9 +26,8 @@ class Ash_Jquery_Model_System_Config_Source_Version_Jquery
     {
         $this->_options = array(
             array('value' => '', 'label' => Mage::helper('adminhtml')->__('-- Please Select --')),
-            array('value' => '1.9.1', 'label' => '1.9.1'),
-            array('value' => '1.10.2', 'label' => '1.10.2'),
-            array('value' => '2.0.3', 'label' => '2.0.3'),
+            array('value' => '1.11.2', 'label' => '1.11.2'),
+            array('value' => '2.1.3', 'label' => '2.1.3'),
         );
 
         return $this->_options;
