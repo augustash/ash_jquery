@@ -5,7 +5,7 @@
  *
  * @category    Ash
  * @package     Ash_Jquery
- * @copyright   Copyright (c) 2013 August Ash, Inc. (http://www.augustash.com)
+ * @copyright   Copyright (c) 2015 August Ash, Inc. (http://www.augustash.com)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 -->
@@ -20,6 +20,15 @@ Default layout, loads most of the pages
             <action method="addItem" ifconfig="ash_jquery/jquery/enabled"><type>js</type><name>jquery/jquery-noconflict.js</name></action>
             <action method="addItem" ifconfig="ash_jquery/jquery/migrate_enabled"><type>js</type><name helper="ash_jquery/getJqueryMigrateUrl" /></action>
             <action method="addItem" ifconfig="ash_jquery/jquery/ui_enabled"><type>js</type><name helper="ash_jquery/getJqueryUiUrl" /></action>
+
+            <!--
+            ====================================================================
+            Add a custom block to allow other modules to insert snippets
+            of code into the head without having to completely override
+            the ash_jquery/head.phtml template
+            ====================================================================
+            -->
+            <block type="core/text_list" name="before_head_end" as="before_head_end"/>
         </reference>
     </default>
 </layout>
