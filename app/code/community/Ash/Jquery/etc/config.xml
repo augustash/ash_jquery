@@ -12,7 +12,7 @@
 <config>
     <modules>
         <Ash_Jquery>
-             <version>1.7.0</version>
+             <version>1.7.1</version>
         </Ash_Jquery>
     </modules>
 

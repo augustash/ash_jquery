@@ -1,6 +1,6 @@
 app/etc/modules/Ash_Jquery.xml                              app/etc/modules/Ash_Jquery.xml
 app/code/community/Ash/Jquery/                              app/code/community/Ash/Jquery/
-app/locale/en_US/                                           app/locale/en_US/
+app/locale/en_US/*                                          app/locale/en_US/
 app/design/adminhtml/default/default/layout/*               app/design/adminhtml/default/default/layout/
 app/design/adminhtml/default/default/template/ash_jquery/   app/design/adminhtml/default/default/template/ash_jquery/
 app/design/frontend/base/default/layout/*                   app/design/frontend/base/default/layout/
