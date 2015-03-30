@@ -1,20 +1,16 @@
-Title:  Ash_Jquery Extension
-Author: Peter McWilliams  
-Email:  core@augustash.com  
-Date:   Sept 1, 2012  
+Description
+===========
 
-# Description
-
-This extension adds jQuery and enabled no-conflict mode so that it will play 
-nicely with Magento's prototype installation. Users may enable jQuery on frontend
-and/or administration area.
+This extension adds jQuery and jQuery UI to Magneto. Users may enable jQuery on frontend and/or administration area.
 
 Installation
 ------------
 
-1. Clone module with [modman](https://github.com/colinmollenhour/modman)
-2. Delete all contents of the Magento cache
+* Install the extension via [Composer](https://getcomposer.org/)
+* Install the extension via [modman](https://github.com/colinmollenhour/modman)
+* You can also [download from Github](https://github.com/augustash/ash_jquery/archive/master.zip) and unzip the archive in your project root
 
-```
-@copyright  Copyright (c) 2012 August Ash, Inc. (http://www.augustash.com)
-```
+Dependencies
+------------
+
+* [Ash_Core](https://github.com/augustash/ash_core)
