@@ -20,7 +20,6 @@ Default layout, loads most of the pages
             <action method="addItem" ifconfig="ash_jquery/jquery/enabled"><type>js</type><name>jquery/jquery-noconflict.js</name></action>
             <action method="addItem" ifconfig="ash_jquery/jquery/migrate_enabled"><type>js</type><name helper="ash_jquery/getJqueryMigrateUrl" /></action>
             <action method="addItem" ifconfig="ash_jquery/jquery/ui_enabled"><type>js</type><name helper="ash_jquery/getJqueryUiUrl" /></action>
-
             <!--
             ====================================================================
             Add a custom block to allow other modules to insert snippets
