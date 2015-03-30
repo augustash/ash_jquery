@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Add Jquery/Jquery UI support
+ *
+ * @category    Ash
+ * @package     Ash_Jquery
+ * @copyright   Copyright (c) 2015 August Ash, Inc. (http://www.augustash.com)
+ * @license     LICENSE.txt (MIT)
+ */
+-->
+<layout>
+<!--
+Default layout, loads most of the pages
+-->
+    <default>
+        <reference name="head">
+            <action method="setTemplate" ifconfig="ash_jquery/cdn/enabled"><template>ash_jquery/head.phtml</template></action>
+            <action method="addItem" ifconfig="ash_jquery/jquery/enabled"><type>js</type><name helper="ash_jquery/getJqueryUrl" /></action>
+            <action method="addItem" ifconfig="ash_jquery/jquery/enabled"><type>js</type><name>jquery/jquery-noconflict.js</name></action>
+            <action method="addItem" ifconfig="ash_jquery/jquery/migrate_enabled"><type>js</type><name helper="ash_jquery/getJqueryMigrateUrl" /></action>
+            <action method="addItem" ifconfig="ash_jquery/jquery/ui_enabled"><type>js</type><name helper="ash_jquery/getJqueryUiUrl" /></action>
+            <!--
+            ====================================================================
+            Add a custom block to allow other modules to insert snippets
+            of code into the head without having to completely override
+            the ash_jquery/head.phtml template
+            ====================================================================
+            -->
+            <block type="core/text_list" name="before_head_end" as="before_head_end"/>
+        </reference>
+    </default>
+</layout>
